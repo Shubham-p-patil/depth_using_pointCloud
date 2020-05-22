@@ -1,0 +1,13 @@
+<launch>
+    
+    <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+        args="0  freenect_launch freenect.launch"
+        name="kinect_manager" output="screen" />
+    
+    <node pkg="timed_roslaunch" type="timed_roslaunch.sh"
+        args="20  depth_calc object_detection.launch"
+        name="object_detection" output="screen" />
+
+        
+    
+</launch>
